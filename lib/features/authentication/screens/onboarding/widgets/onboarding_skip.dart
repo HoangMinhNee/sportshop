@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sportshop/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/device/device_utility.dart';
