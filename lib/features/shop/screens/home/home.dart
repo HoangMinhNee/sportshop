@@ -4,7 +4,9 @@ import 'package:sportshop/common/widgets/custom_shapes/containers/search_contain
 import 'package:sportshop/common/widgets/texts/section_heading.dart';
 import 'package:sportshop/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:sportshop/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:sportshop/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:sportshop/utils/contants/colors.dart';
+import 'package:sportshop/utils/contants/image_strings.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -47,7 +49,18 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+
+            /// Body
+            Padding(
+                padding: EdgeInsets.all(MSizes.defaultSpace),
+                child: MPromoSlider(
+                  banners: [
+                    MImages.promoBanner4,
+                    MImages.promoBanner1,
+                    MImages.promoBanner3,
+                  ],
+                ))
           ],
         ),
       ),

@@ -227,6 +227,10 @@ class MImages {
       "assets/images/products/promo-banner-2.png";
   static const String promoBanner3 =
       "assets/images/products/promo-banner-3.png";
+  static const String promoBanner4 =
+      "assets/images/products/promo-banner-4.png";
+  static const String promoBanner5 =
+      "assets/images/products/promo-banner-5.png";
   static const String banner1 = "assets/images/banners/banner_1.jpg";
   static const String banner2 = "assets/images/banners/banner_2.jpg";
   static const String banner3 = "assets/images/banners/banner_3.jpg";
