@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:sportshop/common/widgets/texts/section_heading.dart';
 import 'package:sportshop/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 
@@ -9,25 +10,36 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             MPrimaryHeaderContainer(
               child: Column(
                 children: [
-                  /// Appbar
-                  MHomeAppBar(),
-                  SizedBox(height: MSizes.spaceBtwSections),
+                  /// -- Appbar
+                  const MHomeAppBar(),
+                  const SizedBox(height: MSizes.spaceBtwSections),
 
-                  /// Seacrhbar
-                  MSearchContainer(text: 'Tìm kiếm'),
-                  SizedBox(height: MSizes.spaceBtwSections),
+                  /// -- Seacrhbar
+                  const MSearchContainer(text: 'Tìm kiếm'),
+                  const SizedBox(height: MSizes.spaceBtwSections),
 
-                  /// Categories
+                  /// -- Categories
                   Padding(
-                    padding: EdgeInsets.only(left: MSizes.defaultSpace),
-                    child: Column(),
+                    padding: const EdgeInsets.only(left: MSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        /// Heading
+                        MSectionHeading(
+                          title: 'Danh mục',
+                          showActionButton: false,
+                        ),
+                        const SizedBox(
+                          height: MSizes.spaceBtwItems,
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
