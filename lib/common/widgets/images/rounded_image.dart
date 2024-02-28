@@ -8,7 +8,7 @@ class MRoundedImage extends StatelessWidget {
     this.width,
     this.height,
     required this.imageUrl,
-    this.applyImageRadius = false,
+    this.applyImageRadius = true,
     this.border,
     this.backgroundColor = MColors.light,
     this.fit = BoxFit.contain,

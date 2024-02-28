@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:sportshop/common/widgets/products/product_card/product_card_vertical.dart';
 import 'package:sportshop/common/widgets/texts/section_heading.dart';
 import 'package:sportshop/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:sportshop/features/shop/screens/home/widgets/home_categories.dart';
@@ -54,11 +55,20 @@ class HomeScreen extends StatelessWidget {
             /// Body
             Padding(
                 padding: EdgeInsets.all(MSizes.defaultSpace),
-                child: MPromoSlider(
-                  banners: [
-                    MImages.promoBanner4,
-                    MImages.promoBanner1,
-                    MImages.promoBanner3,
+                child: Column(
+                  children: [
+                    /// -- Promo Slider
+                    MPromoSlider(
+                      banners: [
+                        MImages.promoBanner4,
+                        MImages.promoBanner1,
+                        MImages.promoBanner3,
+                      ],
+                    ),
+                    SizedBox(height: MSizes.spaceBtwSections),
+
+                    /// -- Popular Product
+                    MProductCardVertical()
                   ],
                 ))
           ],
