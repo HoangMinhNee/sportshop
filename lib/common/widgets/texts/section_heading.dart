@@ -5,9 +5,9 @@ class MSectionHeading extends StatelessWidget {
     super.key,
     this.onPressed,
     this.textColor,
-    this.showActionButton = false,
+    this.showActionButton = true,
     required this.title,
-    this.buttonTitle = 'View all',
+    this.buttonTitle = 'Xem tất cả',
   });
 
   final Color? textColor;
@@ -18,6 +18,7 @@ class MSectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           title,
@@ -29,7 +30,7 @@ class MSectionHeading extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         if (showActionButton)
-          TextButton(onPressed: () {}, child: Text(buttonTitle))
+          TextButton(onPressed: onPressed, child: Text(buttonTitle))
       ],
     );
   }

@@ -68,6 +68,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: MSizes.spaceBtwSections),
 
+                    /// -- Heading
+                    const MSectionHeading(title: 'SẢN PHẨM NỔI BẬT'),
+                    const SizedBox(height: MSizes.spaceBtwItems),
+
                     /// -- Popular Product
                     MGridLayout(
                         itemCount: 4,

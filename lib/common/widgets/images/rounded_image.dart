@@ -5,16 +5,16 @@ import 'package:sportshop/utils/contants/sizes.dart';
 class MRoundedImage extends StatelessWidget {
   const MRoundedImage({
     super.key,
+    this.border,
     this.width,
     this.height,
-    required this.imageUrl,
-    this.applyImageRadius = true,
-    this.border,
-    this.backgroundColor = MColors.light,
-    this.fit = BoxFit.contain,
     this.padding,
-    this.isNetworkImage = false,
     this.onPressed,
+    this.applyImageRadius = true,
+    required this.imageUrl,
+    this.fit = BoxFit.contain,
+    this.backgroundColor,
+    this.isNetworkImage = false,
     this.borderRadius = MSizes.md,
   });
 
@@ -22,7 +22,7 @@ class MRoundedImage extends StatelessWidget {
   final String imageUrl;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;

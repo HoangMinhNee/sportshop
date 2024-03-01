@@ -4,6 +4,7 @@ import 'package:sportshop/common/styles/shadows.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:sportshop/common/widgets/icons/circular_icon.dart';
 import 'package:sportshop/common/widgets/images/rounded_image.dart';
+import 'package:sportshop/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:sportshop/common/widgets/texts/product_price_text.dart';
 import 'package:sportshop/common/widgets/texts/product_title_text.dart';
 import 'package:sportshop/utils/contants/colors.dart';
@@ -37,9 +38,7 @@ class MProductCardVertical extends StatelessWidget {
               children: [
                 /// --Thumbnail Image
                 const MRoundedImage(
-                  imageUrl: MImages.productImage1,
-                  applyImageRadius: true,
-                ),
+                    imageUrl: MImages.productImage1, applyImageRadius: true),
 
                 /// --Sale Tag
                 Positioned(
@@ -71,58 +70,49 @@ class MProductCardVertical extends StatelessWidget {
           const SizedBox(height: MSizes.spaceBtwItems / 2),
 
           /// -- Details
-          Padding(
-            padding: const EdgeInsets.only(left: MSizes.sm),
+          const Padding(
+            padding: EdgeInsets.only(left: MSizes.sm),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MProductTitleText(
-                  title: 'Green Nike Air Shoes',
-                  smallSize: true,
-                ),
-                const SizedBox(height: MSizes.spaceBtwItems / 2),
-                Row(
-                  children: [
-                    Text(
-                      'Nike',
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                      style: Theme.of(context).textTheme.labelMedium,
-                    ),
-                    const SizedBox(width: MSizes.xs),
-                    const Icon(
-                      Iconsax.verify5,
-                      color: MColors.primary,
-                      size: MSizes.iconXs,
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const MProductPriceText(price: '40.0'),
-                    Container(
-                      decoration: const BoxDecoration(
-                          color: MColors.dark,
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(MSizes.cardRadiusMd),
-                              bottomRight:
-                                  Radius.circular(MSizes.productImageRadius))),
-                      child: const SizedBox(
-                        width: MSizes.iconLg * 1.2,
-                        height: MSizes.iconLg * 1.2,
-                        child: Center(
-                          child: Icon(
-                            Iconsax.add,
-                            color: MColors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                )
+                MProductTitleText(
+                    title: 'Green Nike Air Shoes', smallSize: true),
+                SizedBox(height: MSizes.spaceBtwItems / 2),
+                MBrandTitleWithVerifiedIcon(title: 'Nike')
               ],
             ),
+          ),
+
+          const Spacer(),
+
+          /// Price Row
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              /// Price
+              const Padding(
+                padding: EdgeInsets.only(left: MSizes.sm),
+                child: MProductPriceText(price: '40.0'),
+              ),
+
+              /// Add to Card Button
+              Container(
+                decoration: const BoxDecoration(
+                  color: MColors.dark,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(MSizes.cardRadiusMd),
+                    bottomRight: Radius.circular(MSizes.productImageRadius),
+                  ),
+                ),
+                child: const SizedBox(
+                  width: MSizes.iconLg * 1.2,
+                  height: MSizes.iconLg * 1.2,
+                  child: Center(
+                    child: Icon(Iconsax.add, color: MColors.white),
+                  ),
+                ),
+              ),
+            ],
           )
         ]),
       ),
