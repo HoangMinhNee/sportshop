@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sportshop/utils/contants/colors.dart';
-import 'package:sportshop/utils/contants/image_strings.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/helpers/helper_functions.dart';
 

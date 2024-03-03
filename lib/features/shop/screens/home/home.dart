@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
 
                     /// -- Popular Product
                     MGridLayout(
-                        itemCount: 4,
+                        itemCount: 2,
                         itemBuilder: (_, index) => const MProductCardVertical())
                   ],
                 ))

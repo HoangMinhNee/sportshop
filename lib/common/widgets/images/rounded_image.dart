@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sportshop/utils/contants/colors.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 
 class MRoundedImage extends StatelessWidget {
