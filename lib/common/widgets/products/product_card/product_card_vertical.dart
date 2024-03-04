@@ -29,18 +29,18 @@ class MProductCardVertical extends StatelessWidget {
           color: dark ? MColors.darkerGrey : MColors.white,
         ),
         child: Column(children: [
-          /// thumbnail, Whishlist Button, Discount Tag
+          //* thumbnail, Whishlist Button, Discount Tag
           MRoundedContainer(
             height: 180,
             padding: const EdgeInsets.all(MSizes.sm),
             backgroundColor: dark ? MColors.dark : MColors.light,
             child: Stack(
               children: [
-                /// --Thumbnail Image
+                //* --Thumbnail Image
                 const MRoundedImage(
                     imageUrl: MImages.productImage1, applyImageRadius: true),
 
-                /// --Sale Tag
+                //* --Sale Tag
                 Positioned(
                   top: 12,
                   child: MRoundedContainer(
@@ -58,7 +58,7 @@ class MProductCardVertical extends StatelessWidget {
                   ),
                 ),
 
-                /// --Favourite Icon Butotn
+                //* --Favourite Icon Butotn
                 const Positioned(
                   top: 0,
                   right: 0,
@@ -69,33 +69,36 @@ class MProductCardVertical extends StatelessWidget {
           ),
           const SizedBox(height: MSizes.spaceBtwItems / 2),
 
-          /// -- Details
+          //* -- Details
           const Padding(
             padding: EdgeInsets.only(left: MSizes.sm),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                MProductTitleText(
-                    title: 'Green Nike Air Shoes', smallSize: true),
-                SizedBox(height: MSizes.spaceBtwItems / 2),
-                MBrandTitleWithVerifiedIcon(title: 'Nike')
-              ],
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  MProductTitleText(
+                      title: 'Green Nike Air Shoes', smallSize: true),
+                  SizedBox(height: MSizes.spaceBtwItems / 2),
+                  MBrandTitleWithVerifiedIcon(title: 'Nike')
+                ],
+              ),
             ),
           ),
 
           const Spacer(),
 
-          /// Price Row
+          //* Price Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              /// Price
+              //* Price
               const Padding(
                 padding: EdgeInsets.only(left: MSizes.sm),
-                child: MProductPriceText(price: '40.0'),
+                child: MProductPriceText(price: '2.990.000'),
               ),
 
-              /// Add to Card Button
+              //* Add to Card Button
               Container(
                 decoration: const BoxDecoration(
                   color: MColors.dark,

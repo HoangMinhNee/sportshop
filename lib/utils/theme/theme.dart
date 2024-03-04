@@ -28,14 +28,16 @@ class MAppTheme {
     outlinedButtonTheme: MOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: MTextFormFieldTheme.lightInputDecorationTheme,
   );
+
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
+    disabledColor: MColors.grey,
     brightness: Brightness.dark,
-    primaryColor: Colors.blue,
+    primaryColor: MColors.primary,
     textTheme: MTextTheme.darkTextTheme,
     chipTheme: MChipTheme.darkChipTheme,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: MColors.black,
     appBarTheme: MAppBarTheme.darkAppBarTheme,
     checkboxTheme: MCheckboxTheme.darkCheckboxTheme,
     bottomSheetTheme: MBottomSheetTheme.darkBottomSheetTheme,

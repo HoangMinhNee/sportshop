@@ -2,15 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:sportshop/common/widgets/appbar/appbar.dart';
 import 'package:sportshop/common/widgets/appbar/tabbar.dart';
 import 'package:sportshop/common/widgets/brands/brand_card.dart';
-import 'package:sportshop/common/widgets/brands/brand_show_case.dart';
-import 'package:sportshop/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:sportshop/common/widgets/layouts/grid_layout.dart';
 import 'package:sportshop/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:sportshop/common/widgets/texts/section_heading.dart';
 import 'package:sportshop/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:sportshop/utils/contants/colors.dart';
-import 'package:sportshop/utils/contants/image_strings.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/helpers/helper_functions.dart';
 

@@ -16,11 +16,10 @@ class MPrimaryHeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return MCurvedEdgeWidget(
       child: Container(
-        height: 400,
         color: MColors.primary,
         child: Stack(
           children: [
-            /// Background Custom Shapes
+            //* Background Custom Shapes
             Positioned(
               top: -150,
               right: -250,
