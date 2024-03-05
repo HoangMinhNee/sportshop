@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sportshop/utils/contants/colors.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/device/device_utility.dart';
+import 'package:sportshop/utils/helpers/helper_functions.dart';
 
 class MAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MAppBar({
@@ -21,6 +23,7 @@ class MAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? leadingOnPressed;
   @override
   Widget build(BuildContext context) {
+    final dark = MHelperFunctions.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: MSizes.md),
       child: AppBar(
@@ -28,7 +31,8 @@ class MAppBar extends StatelessWidget implements PreferredSizeWidget {
         leading: showBackArrow
             ? IconButton(
                 onPressed: () => Get.back(),
-                icon: const Icon(Iconsax.arrow_left))
+                icon: Icon(Iconsax.arrow_left,
+                    color: dark ? MColors.white : MColors.dark))
             : leadingIcon != null
                 ? IconButton(
                     onPressed: leadingOnPressed, icon: Icon(leadingIcon))
