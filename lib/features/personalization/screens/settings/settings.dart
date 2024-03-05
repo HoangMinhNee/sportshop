@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sportshop/common/widgets/appbar/appbar.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/primary_header_container.dart';
-import 'package:sportshop/common/widgets/images/circular_image.dart';
 import 'package:sportshop/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:sportshop/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:sportshop/common/widgets/texts/section_heading.dart';
+import 'package:sportshop/features/personalization/screens/profile/profile.dart';
 import 'package:sportshop/utils/contants/colors.dart';
-import 'package:sportshop/utils/contants/image_strings.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 
 class SettingScreen extends StatelessWidget {
@@ -32,7 +32,8 @@ class SettingScreen extends StatelessWidget {
                               .apply(color: MColors.white))),
 
                   //* User Profile Card
-                  const MUserProfileTile(),
+                  MUserProfileTile(
+                      onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(height: MSizes.spaceBtwSections),
                 ],
               ),

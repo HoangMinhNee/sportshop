@@ -5,7 +5,7 @@ import 'package:sportshop/utils/contants/sizes.dart';
 class MOutlinedButtonTheme {
   MOutlinedButtonTheme._();
 
-  /* -- Light Theme -- */
+  //* -- Light Theme
   static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       elevation: 0,
@@ -20,7 +20,7 @@ class MOutlinedButtonTheme {
     ),
   );
 
-  /* -- Dark Theme -- */
+  //* -- Dark Theme
   static final darkOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       foregroundColor: MColors.light,

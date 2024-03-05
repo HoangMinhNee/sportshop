@@ -24,7 +24,6 @@ class MProductCardVertical extends StatelessWidget {
         width: 180,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
-          boxShadow: [MShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(MSizes.productImageRadius),
           color: dark ? MColors.darkerGrey : MColors.white,
         ),

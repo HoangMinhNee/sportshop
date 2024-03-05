@@ -23,15 +23,15 @@ class HomeScreen extends StatelessWidget {
             const MPrimaryHeaderContainer(
               child: Column(
                 children: [
-                  /// -- Appbar
+                  //* -- Appbar
                   MHomeAppBar(),
                   SizedBox(height: MSizes.spaceBtwSections),
 
-                  /// -- Seacrhbar
+                  //* -- Seacrhbar
                   MSearchContainer(text: 'Tìm kiếm'),
                   SizedBox(height: MSizes.spaceBtwSections),
 
-                  /// -- Categories
+                  //* -- Categories
                   Padding(
                     padding: EdgeInsets.only(left: MSizes.defaultSpace),
                     child: Column(
@@ -54,12 +54,12 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
-            /// Body
+            //* Body
             Padding(
                 padding: const EdgeInsets.all(MSizes.defaultSpace),
                 child: Column(
                   children: [
-                    /// -- Promo Slider
+                    //* -- Promo Slider
                     const MPromoSlider(
                       banners: [
                         MImages.promoBanner4,
@@ -69,11 +69,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: MSizes.spaceBtwSections),
 
-                    /// -- Heading
+                    //* -- Heading
                     const MSectionHeading(title: 'SẢN PHẨM NỔI BẬT'),
                     const SizedBox(height: MSizes.spaceBtwItems),
 
-                    /// -- Popular Product
+                    //* -- Popular Product
                     MGridLayout(
                         itemCount: 2,
                         itemBuilder: (_, index) => const MProductCardVertical())

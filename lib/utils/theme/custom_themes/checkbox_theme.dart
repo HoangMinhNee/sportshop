@@ -5,7 +5,7 @@ import 'package:sportshop/utils/contants/sizes.dart';
 class MCheckboxTheme {
   MCheckboxTheme._();
 
-  /// Customizable Light Text Theme
+  //* Customizable Light Text Theme
   static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
     shape:
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(MSizes.xs)),
@@ -25,7 +25,7 @@ class MCheckboxTheme {
     }),
   );
 
-  /// Customizable Dark Text Theme
+  //* Customizable Dark Text Theme
   static CheckboxThemeData darkCheckboxTheme = CheckboxThemeData(
     shape:
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(MSizes.xs)),

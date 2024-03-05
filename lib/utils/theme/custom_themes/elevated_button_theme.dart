@@ -5,7 +5,7 @@ import 'package:sportshop/utils/contants/sizes.dart';
 class MElevatedButtonTheme {
   MElevatedButtonTheme._();
 
-  /* -- Light Theme -- */
+  //* -- Light Theme
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
@@ -22,7 +22,7 @@ class MElevatedButtonTheme {
     ),
   );
 
-  /* -- Dark Theme -- */
+  //* -- Dark Theme
   static final darkElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,

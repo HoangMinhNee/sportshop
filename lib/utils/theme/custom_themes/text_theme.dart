@@ -53,7 +53,7 @@ class MTextTheme {
     bodyMedium: const TextStyle().copyWith(
         fontSize: 14.0, fontWeight: FontWeight.normal, color: MColors.light),
     bodySmall: const TextStyle().copyWith(
-        fontSize: 12.0,
+        fontSize: 14.0,
         fontWeight: FontWeight.w500,
         color: MColors.light.withOpacity(0.5)),
     labelLarge: const TextStyle().copyWith(

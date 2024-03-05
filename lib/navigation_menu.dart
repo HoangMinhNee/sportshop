@@ -29,10 +29,12 @@ class NavigationMenu extends StatelessWidget {
               ? MColors.white.withOpacity(0.1)
               : MColors.black.withOpacity(0.1),
           destinations: const [
-            NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
-            NavigationDestination(icon: Icon(Iconsax.heart), label: 'Wishlist'),
-            NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
+            NavigationDestination(
+                icon: Icon(Iconsax.home), label: 'Trang Chủ '),
+            NavigationDestination(icon: Icon(Iconsax.shop), label: 'Shop'),
+            NavigationDestination(
+                icon: Icon(Iconsax.heart), label: 'Yêu Thích'),
+            NavigationDestination(icon: Icon(Iconsax.user), label: 'Tài Khoản'),
           ],
         ),
       ),
