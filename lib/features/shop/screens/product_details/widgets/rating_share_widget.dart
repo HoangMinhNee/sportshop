@@ -20,7 +20,7 @@ class MRatingAndShare extends StatelessWidget {
             Text.rich(TextSpan(children: [
               TextSpan(
                   text: '5.0', style: Theme.of(context).textTheme.bodyLarge),
-              const TextSpan(text: '(999)'),
+              const TextSpan(text: '(123)'),
             ]))
           ],
         ),

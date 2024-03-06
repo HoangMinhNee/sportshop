@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:readmore/readmore.dart';
 import 'package:sportshop/common/widgets/appbar/appbar.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:sportshop/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:sportshop/common/widgets/icons/circular_icon.dart';
 import 'package:sportshop/common/widgets/images/rounded_image.dart';
+import 'package:sportshop/common/widgets/texts/section_heading.dart';
+import 'package:sportshop/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
+import 'package:sportshop/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:sportshop/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:sportshop/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:sportshop/features/shop/screens/product_details/widgets/rating_share_widget.dart';
@@ -20,6 +24,7 @@ class ProductDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = MHelperFunctions.isDarkMode(context);
     return Scaffold(
+      bottomNavigationBar: MBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -27,23 +32,60 @@ class ProductDetailScreen extends StatelessWidget {
             MProductImageSlider(dark: dark),
 
             //* - Product Details
-            const Padding(
-              padding: EdgeInsets.only(
+            Padding(
+              padding: const EdgeInsets.only(
                   right: MSizes.defaultSpace,
                   left: MSizes.defaultSpace,
                   bottom: MSizes.defaultSpace),
               child: Column(
                 children: [
                   //* - Rating & Share
-                  MRatingAndShare(),
+                  const MRatingAndShare(),
 
                   //* - Price, Title, Stock, Brand
-                  MProductMetaData()
+                  const MProductMetaData(),
 
                   //* - Attributes
+                  const MProductAttributes(),
+                  const SizedBox(height: MSizes.spaceBtwSections),
+
                   //* - Checkout Button
+                  SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          onPressed: () {}, child: const Text('Checkout'))),
+                  const SizedBox(height: MSizes.spaceBtwSections),
+
                   //* - Description
+                  const MSectionHeading(
+                      title: 'Mô tả', showActionButton: false),
+                  const SizedBox(height: MSizes.spaceBtwItems),
+                  const ReadMoreText(
+                    'Giày Thể Thao Nike Air Zoom Pegasus 33 có lẽ là siêu phẩm giày chạy bộ được chờ đợt nhất năm 2016, Nike đã tích hợp những công nghệ tiên tiến nhất của hãng để tạo nên một trong những mẫu giày tốt nhất thế giới mà bạn không thể bỏ qua.',
+                    trimLines: 2,
+                    trimMode: TrimMode.Line,
+                    trimCollapsedText: 'Xem thêm',
+                    trimExpandedText: 'Ẩn bớt',
+                    moreStyle:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                    lessStyle:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                  ),
+
                   //* - Reviews
+                  const Divider(),
+                  const SizedBox(height: MSizes.spaceBtwItems),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      MSectionHeading(
+                          title: 'Đánh giá(123)', showActionButton: false),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Iconsax.arrow_right_3))
+                    ],
+                  ),
+                  const SizedBox(height: MSizes.spaceBtwSections),
                 ],
               ),
             ),

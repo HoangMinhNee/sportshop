@@ -4,15 +4,16 @@ import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/helpers/helper_functions.dart';
 
 class MCircularIcon extends StatelessWidget {
-  const MCircularIcon(
-      {super.key,
-      this.width,
-      this.height,
-      this.size = MSizes.lg,
-      required this.icon,
-      this.color,
-      this.backgroundColor,
-      this.onPressed});
+  const MCircularIcon({
+    super.key,
+    this.width,
+    this.height,
+    this.size = MSizes.lg,
+    required this.icon,
+    this.color,
+    this.backgroundColor,
+    this.onPressed,
+  });
 
   final double? width, height, size;
   final IconData icon;

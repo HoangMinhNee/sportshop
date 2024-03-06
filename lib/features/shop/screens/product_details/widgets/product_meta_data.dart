@@ -40,20 +40,21 @@ class MProductMetaData extends StatelessWidget {
 
             //* Price
             Text(
-              '3.000.000 \đ',
+              '3.694.000 \đ',
               style: Theme.of(context)
                   .textTheme
                   .titleSmall!
                   .apply(decoration: TextDecoration.lineThrough),
             ),
             const SizedBox(width: MSizes.spaceBtwItems),
-            const MProductPriceText(price: '2.250.000', isLarge: true),
+            const MProductPriceText(price: '2.790.000', isLarge: true),
           ],
         ),
         const SizedBox(height: MSizes.spaceBtwItems / 1.5),
 
         //* Title
-        const MProductTitleText(title: 'Green Nike Sports Shoe'),
+        const MProductTitleText(
+            title: 'Giày Thể Thao Nike Air Zoom Pegasus 33'),
         const SizedBox(height: MSizes.spaceBtwItems / 1.5),
 
         //* Stock Status
@@ -70,7 +71,7 @@ class MProductMetaData extends StatelessWidget {
         Row(
           children: [
             MCircularImage(
-              image: MImages.shoeIcon,
+              image: MImages.nikeLogo,
               width: 32,
               height: 32,
               overlayColor: dark ? MColors.white : MColors.black,
