@@ -6,6 +6,7 @@ import 'package:sportshop/common/widgets/custom_shapes/containers/primary_header
 import 'package:sportshop/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:sportshop/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:sportshop/common/widgets/texts/section_heading.dart';
+import 'package:sportshop/features/personalization/screens/address/address.dart';
 import 'package:sportshop/features/personalization/screens/profile/profile.dart';
 import 'package:sportshop/utils/contants/colors.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
@@ -48,10 +49,11 @@ class SettingScreen extends StatelessWidget {
                       title: 'Cài Đặt Tài Khoản', showActionButton: false),
                   const SizedBox(height: MSizes.spaceBtwItems),
 
-                  const MSettingsMenuTile(
+                  MSettingsMenuTile(
                     icon: Iconsax.safe_home,
                     title: 'Địa Chỉ',
                     subTitle: 'Đặt địa chỉ giao hàng',
+                    onTap: () => Get.to(() => const UserAddressScreen()),
                   ),
                   const MSettingsMenuTile(
                     icon: Iconsax.shopping_cart,
