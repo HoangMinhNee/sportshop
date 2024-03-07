@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:sportshop/common/widgets/appbar/appbar.dart';
@@ -12,6 +13,7 @@ import 'package:sportshop/features/shop/screens/product_details/widgets/product_
 import 'package:sportshop/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:sportshop/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:sportshop/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:sportshop/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:sportshop/utils/contants/colors.dart';
 import 'package:sportshop/utils/contants/image_strings.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
@@ -78,10 +80,11 @@ class ProductDetailScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MSectionHeading(
+                      const MSectionHeading(
                           title: 'Đánh giá(123)', showActionButton: false),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () =>
+                              Get.to(() => const ProductReviewsScreen()),
                           icon: const Icon(Iconsax.arrow_right_3))
                     ],
                   ),
