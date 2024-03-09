@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sportshop/common/widgets/appbar/appbar.dart';
-import 'package:sportshop/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:sportshop/features/personalization/screens/address/add_new_address.dart';
 import 'package:sportshop/features/personalization/screens/address/widgets/single_address.dart';
 import 'package:sportshop/utils/contants/colors.dart';

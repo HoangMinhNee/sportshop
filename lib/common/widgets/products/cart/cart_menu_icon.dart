@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sportshop/features/shop/screens/cart/cart.dart';
 import 'package:sportshop/utils/contants/colors.dart';
 
 class MCartCounterIcon extends StatelessWidget {
   const MCartCounterIcon({
     super.key,
     required this.onPressed,
-    required this.iconColor,
+    this.iconColor,
+    this.counterBgColor,
+    this.counterTextColor,
   });
+
   final VoidCallback onPressed;
-  final Color iconColor;
+  final Color? iconColor, counterBgColor, counterTextColor;
 
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
       IconButton(
-          onPressed: onPressed,
+          onPressed: () => Get.to(() => const CartScreen()),
           icon: Icon(Iconsax.shopping_bag, color: iconColor)),
       Positioned(
         right: 0,
