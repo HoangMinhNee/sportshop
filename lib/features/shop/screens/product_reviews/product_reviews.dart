@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:sportshop/common/widgets/appbar/appbar.dart';
 import 'package:sportshop/common/widgets/products/ratings/rating_indicator.dart';
 import 'package:sportshop/features/shop/screens/product_reviews/widgets/rating_progress_indicator.dart';
 import 'package:sportshop/features/shop/screens/product_reviews/widgets/user_review_card.dart';
-import 'package:sportshop/utils/contants/colors.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
-import 'package:sportshop/utils/device/device_utility.dart';
 
 class ProductReviewsScreen extends StatelessWidget {
   const ProductReviewsScreen({super.key});

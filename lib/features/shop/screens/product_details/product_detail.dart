@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
-import 'package:sportshop/common/widgets/appbar/appbar.dart';
-import 'package:sportshop/common/widgets/custom_shapes/containers/circular_container.dart';
-import 'package:sportshop/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:sportshop/common/widgets/icons/circular_icon.dart';
-import 'package:sportshop/common/widgets/images/rounded_image.dart';
 import 'package:sportshop/common/widgets/texts/section_heading.dart';
 import 'package:sportshop/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
 import 'package:sportshop/features/shop/screens/product_details/widgets/product_attributes.dart';
@@ -14,8 +9,6 @@ import 'package:sportshop/features/shop/screens/product_details/widgets/product_
 import 'package:sportshop/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:sportshop/features/shop/screens/product_details/widgets/rating_share_widget.dart';
 import 'package:sportshop/features/shop/screens/product_reviews/product_reviews.dart';
-import 'package:sportshop/utils/contants/colors.dart';
-import 'package:sportshop/utils/contants/image_strings.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/helpers/helper_functions.dart';
 
