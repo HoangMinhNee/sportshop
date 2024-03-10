@@ -10,16 +10,16 @@ class MAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MAppBar({
     super.key,
     this.title,
-    this.leadingIcon,
     this.actions,
+    this.leadingIcon,
     this.leadingOnPressed,
     this.showBackArrow = false,
   });
 
   final Widget? title;
   final bool showBackArrow;
-  final IconData? leadingIcon;
   final List<Widget>? actions;
+  final IconData? leadingIcon;
   final VoidCallback? leadingOnPressed;
   @override
   Widget build(BuildContext context) {

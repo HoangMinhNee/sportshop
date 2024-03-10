@@ -23,13 +23,14 @@ class SuccessScreen extends StatelessWidget {
           padding: MSpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
+              //* Image
               Image(
                 image: AssetImage(image),
                 width: MHelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(height: MSizes.spaceBtwSections),
 
-              /// Title & subTitle
+              //* Title & subTitle
               Text(
                 title,
                 style: Theme.of(context).textTheme.headlineSmall,
@@ -43,7 +44,7 @@ class SuccessScreen extends StatelessWidget {
               ),
               const SizedBox(height: MSizes.spaceBtwSections),
 
-              /// Buttons
+              //* Buttons
               SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
