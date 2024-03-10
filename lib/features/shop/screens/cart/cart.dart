@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sportshop/common/widgets/appbar/appbar.dart';
-import 'package:sportshop/common/widgets/products/cart/add_remove_button.dart';
-import 'package:sportshop/common/widgets/products/cart/cart_item.dart';
-import 'package:sportshop/common/widgets/texts/product_price_text.dart';
 import 'package:sportshop/features/shop/screens/cart/widgets/cart_items.dart';
 import 'package:sportshop/features/shop/screens/checkout/checkout.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
