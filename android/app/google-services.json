@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "783029460086",
+    "project_id": "ecommerceapp-sportshop",
+    "storage_bucket": "ecommerceapp-sportshop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783029460086:android:6538215d47f90b8c911357",
+        "android_client_info": {
+          "package_name": "com.example.sportshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783029460086-h6r2irtfdb76qaaoldbl12lcru0hjm80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sportshop",
+            "certificate_hash": "e814b0ecdcd1d10aa8cbb5e4389eaaa0e9055528"
+          }
+        },
+        {
+          "client_id": "783029460086-005itdpaldjqiqq74gp5lbaqk2pvvc88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5BSVCynRmizNLMoFOEEHPn7akp6sEzoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783029460086-005itdpaldjqiqq74gp5lbaqk2pvvc88.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "783029460086-fhs0jgkopsm6396dkf35jaatg6rt3vu3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sportshop.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
