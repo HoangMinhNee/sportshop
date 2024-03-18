@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sportshop/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:sportshop/utils/contants/colors.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/contants/text_string.dart';
@@ -8,13 +10,17 @@ class MTermsAndConditionsCheckbox extends StatelessWidget {
   const MTermsAndConditionsCheckbox({super.key});
   @override
   Widget build(BuildContext context) {
+    final controller = SignupController.instance;
     final dark = MHelperFunctions.isDarkMode(context);
     return Row(
       children: [
         SizedBox(
             width: 18,
             height: 24,
-            child: Checkbox(value: true, onChanged: (value) {})),
+            child: Obx(() => Checkbox(
+                value: controller.privacyPolicy.value,
+                onChanged: (value) => controller.privacyPolicy.value =
+                    !controller.privacyPolicy.value))),
         const SizedBox(width: MSizes.spaceBtwItems),
         Text.rich(
           TextSpan(

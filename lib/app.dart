@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sportshop/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:sportshop/bindings/general_bindings.dart';
 import 'package:sportshop/utils/contants/colors.dart';
 import 'package:sportshop/utils/theme/theme.dart';
 
@@ -14,6 +14,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MAppTheme.lightTheme,
       darkTheme: MAppTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       //* Show Loader or Circular Progress Indicator
       //* meanwhile Authentication Repository is deciding to show relevant screen.
       home: const Scaffold(
