@@ -1,9 +1,12 @@
-//* Repository class for user-realated operations.
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:sportshop/features/personalization/models/user_model.dart';
+import 'package:sportshop/utils/exceptions/firebase_exceptions.dart';
+import 'package:sportshop/utils/exceptions/format_exceptions.dart';
+import 'package:sportshop/utils/exceptions/platform_exceptions.dart';
 
+//* Repository class for user-realated operations.
 class UserRepository extends GetxController {
   static UserRepository get instance => Get.find();
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:sportshop/common/styles/spacing_styles.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/contants/text_string.dart';
-import 'package:sportshop/utils/helpers/helper_functions.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen(
@@ -24,19 +24,19 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               //* Image
-              Image(
-                image: AssetImage(image),
-                width: MHelperFunctions.screenWidth() * 0.6,
+              Lottie.asset(
+                image,
+                width: MediaQuery.of(context).size.width * 0.6,
               ),
               const SizedBox(height: MSizes.spaceBtwSections),
 
               //* Title & subTitle
               Text(
                 title,
-                style: Theme.of(context).textTheme.headlineSmall,
+                style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: MSizes.spaceBtwSections),
+              const SizedBox(height: MSizes.spaceBtwItems),
               Text(
                 subTitle,
                 style: Theme.of(context).textTheme.labelMedium,
@@ -49,7 +49,7 @@ class SuccessScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                       onPressed: onPressed,
-                      child: const Text(MTexts.tContinue))),
+                      child: const Text(MTexts.mContinue))),
             ],
           ),
         ),

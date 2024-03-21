@@ -5,7 +5,7 @@ class MTexts {
   static const String done = "Hoàn thành";
   static const String submit = "Gửi";
   static const String appName = "T-Store";
-  static const String tContinue = "Tiếp tục";
+  static const String mContinue = "Tiếp tục";
 
   // -- OnBoarding Texts
   static const String onBoardingTitle1 = "Chọn Sản Phẩm Của Bạn";

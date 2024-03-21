@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:sportshop/common/styles/shadows.dart';
 import 'package:sportshop/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:sportshop/common/widgets/icons/circular_icon.dart';
 import 'package:sportshop/common/widgets/images/rounded_image.dart';

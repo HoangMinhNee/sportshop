@@ -1,8 +1,7 @@
-//* Model class representing user data
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sportshop/utils/formatters/formatter.dart';
 
+//* Model class representing user data
 class UserModel {
   //* Keep those values final which you do not want to update
   final String id;

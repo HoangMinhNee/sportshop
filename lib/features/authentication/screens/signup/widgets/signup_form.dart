@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sportshop/features/authentication/controllers/signup/signup_controller.dart';
-import 'package:sportshop/features/authentication/screens/signup/verify_email.dart';
 import 'package:sportshop/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
 import 'package:sportshop/utils/contants/text_string.dart';

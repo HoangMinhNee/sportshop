@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:sportshop/data/repositories/authentication/authentication_repository.dart';
@@ -30,14 +29,22 @@ class SignupController extends GetxController {
     try {
       //* Start Loading
       MFullScreenLoader.openLoadingDialog(
-          'We are processing your infomation...', MImages.productsIllustration);
+          'Chúng tôi đang xử lý thông tin của bạn...', MImages.docerAnimation);
 
       //* Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
-      if (!isConnected) return;
+      if (!isConnected) {
+        //* Remove Loader
+        MFullScreenLoader.stopLoading();
+        return;
+      }
 
       //* Form Validation
-      if (!signupFormKey.currentState!.validate()) return;
+      if (!signupFormKey.currentState!.validate()) {
+        //* Remove Loader
+        MFullScreenLoader.stopLoading();
+        return;
+      }
 
       //* Privacy Policy Check
       if (!privacyPolicy.value) {
@@ -52,6 +59,7 @@ class SignupController extends GetxController {
       final userCredential = await AuthenticationRepository.instance
           .registerWithEmailAndPassword(
               email.text.trim(), password.text.trim());
+
       //* Save Authenticated user data in the Firebase Firestore
       final newUser = UserModel(
         id: userCredential.user!.uid,
@@ -66,6 +74,9 @@ class SignupController extends GetxController {
       final userRepository = Get.put(UserRepository());
       await userRepository.saveUserRecord(newUser);
 
+      //* Remove Loader
+      MFullScreenLoader.stopLoading();
+
       //* Show success Message
       MLoaders.successSnackBar(
           title: 'Chúc mừng',
@@ -73,13 +84,13 @@ class SignupController extends GetxController {
               'Tài khoản của bạn đã được tạo! Xác nhận email để tiếp tục.');
 
       //* Move to Verify Email Screen
-      Get.to(() => const VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
       //* Remove Loader
       MFullScreenLoader.stopLoading();
 
       //* Show some Generic Error to the user
-      MLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+      MLoaders.errorSnackBar(title: 'Ôi Không!', message: e.toString());
     }
   }
 }
