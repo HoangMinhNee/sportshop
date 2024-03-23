@@ -16,7 +16,7 @@ class MBottomAddToCart extends StatelessWidget {
           horizontal: MSizes.defaultSpace, vertical: MSizes.defaultSpace / 2),
       decoration: BoxDecoration(
         color: dark ? MColors.darkerGrey : MColors.light,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topRight: Radius.circular(MSizes.cardRadiusLg),
           topLeft: Radius.circular(MSizes.cardRadiusLg),
         ),
@@ -24,7 +24,7 @@ class MBottomAddToCart extends StatelessWidget {
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Row(
           children: [
-            MCircularIcon(
+            const MCircularIcon(
               icon: Iconsax.minus,
               backgroundColor: MColors.darkGrey,
               width: 40,
@@ -34,7 +34,7 @@ class MBottomAddToCart extends StatelessWidget {
             const SizedBox(width: MSizes.spaceBtwItems),
             Text('2', style: Theme.of(context).textTheme.titleSmall),
             const SizedBox(width: MSizes.spaceBtwItems),
-            MCircularIcon(
+            const MCircularIcon(
               icon: Iconsax.add,
               backgroundColor: MColors.black,
               width: 40,

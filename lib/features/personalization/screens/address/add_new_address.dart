@@ -49,7 +49,7 @@ class AddNewAddressScreen extends StatelessWidget {
                 const SizedBox(height: MSizes.spaceBtwInputFields),
                 SizedBox(
                   width: double.infinity,
-                  child: ElevatedButton(onPressed: () {}, child: Text('Lưu')),
+                  child: ElevatedButton(onPressed: () {}, child: const Text('Lưu')),
                 )
               ],
             ),

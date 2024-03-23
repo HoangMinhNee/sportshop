@@ -4,6 +4,7 @@ class MValidator {
     if (value == null || value.isEmpty) {
       return '$fieldName không được để trống.';
     }
+    return null;
   }
 
   static String? validateEmail(String? value) {

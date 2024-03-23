@@ -61,7 +61,7 @@ class UserReviewCard extends StatelessWidget {
         MRoundedContainer(
           backgroundColor: dark ? MColors.darkerGrey : MColors.grey,
           child: Padding(
-            padding: EdgeInsets.all(MSizes.md),
+            padding: const EdgeInsets.all(MSizes.md),
             child: Column(
               children: [
                 Row(

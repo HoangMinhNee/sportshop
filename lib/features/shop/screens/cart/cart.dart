@@ -28,7 +28,7 @@ class CartScreen extends StatelessWidget {
         padding: const EdgeInsets.all(MSizes.defaultSpace),
         child: ElevatedButton(
             onPressed: () => Get.to(() => const CheckoutScreen()),
-            child: const Text('Thanh toán 9.999.999\đ')),
+            child: const Text('Thanh toán 9.999.999đ')),
       ),
     );
   }

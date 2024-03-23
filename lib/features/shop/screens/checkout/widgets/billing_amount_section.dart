@@ -14,7 +14,7 @@ class MBillingAmountSection extends StatelessWidget {
           children: [
             Text('Tổng tiền hàng',
                 style: Theme.of(context).textTheme.bodyMedium),
-            Text('9999999\đ', style: Theme.of(context).textTheme.bodyMedium),
+            Text('9999999đ', style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),
         const SizedBox(height: MSizes.spaceBtwItems / 2),
@@ -25,7 +25,7 @@ class MBillingAmountSection extends StatelessWidget {
           children: [
             Text('Phí vận chuyển',
                 style: Theme.of(context).textTheme.bodyMedium),
-            Text('30000\đ', style: Theme.of(context).textTheme.labelLarge),
+            Text('30000đ', style: Theme.of(context).textTheme.labelLarge),
           ],
         ),
         const SizedBox(height: MSizes.spaceBtwItems / 2),
@@ -35,7 +35,7 @@ class MBillingAmountSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Thuế', style: Theme.of(context).textTheme.bodyMedium),
-            Text('33333\đ', style: Theme.of(context).textTheme.labelLarge),
+            Text('33333đ', style: Theme.of(context).textTheme.labelLarge),
           ],
         ),
         const SizedBox(height: MSizes.spaceBtwItems / 2),
@@ -45,7 +45,7 @@ class MBillingAmountSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Giảm giá', style: Theme.of(context).textTheme.bodyMedium),
-            Text('33333\đ', style: Theme.of(context).textTheme.labelLarge),
+            Text('33333đ', style: Theme.of(context).textTheme.labelLarge),
           ],
         ),
         const SizedBox(height: MSizes.spaceBtwItems / 2),
@@ -55,7 +55,7 @@ class MBillingAmountSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Tổng Cộng', style: Theme.of(context).textTheme.titleLarge),
-            Text('33333\đ', style: Theme.of(context).textTheme.titleLarge),
+            Text('33333đ', style: Theme.of(context).textTheme.titleLarge),
           ],
         ),
       ],

@@ -32,9 +32,12 @@ class AuthenticationRepository extends GetxController {
   screenRedirect() async {
     final user = _auth.currentUser;
     if (user != null) {
+      //* If the user is logged in
       if (user.emailVerified) {
+        //* If the user's email is verified, navigate to the Navigation Menu
         Get.offAll(() => const NavigationMenu());
       } else {
+        //* If the user's email is not verified, navigate to the VerifyEmailScreen
         Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
       }
     } else {
@@ -49,7 +52,24 @@ class AuthenticationRepository extends GetxController {
 
   // ------------------ Email & Password sign-in ------------------ //
 
-  //* [EmailAuthentication] - Sign In
+  //* [EmailAuthentication] - Login
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw MFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw MFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const MFormatException();
+    } on PlatformException catch (e) {
+      throw MPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Đã xảy ra lỗi. Vui lòng thử lại';
+    }
+  }
 
   //* [EmailAuthentication] - Register
   Future<UserCredential> registerWithEmailAndPassword(

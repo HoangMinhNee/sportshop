@@ -38,7 +38,7 @@ class MProductAttributes extends StatelessWidget {
 
                           //* Actual Price
                           Text(
-                            '2.000.000\đ',
+                            '2.000.000đ',
                             style: Theme.of(context)
                                 .textTheme
                                 .titleSmall!

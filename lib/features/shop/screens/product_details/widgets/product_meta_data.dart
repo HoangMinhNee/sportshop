@@ -40,7 +40,7 @@ class MProductMetaData extends StatelessWidget {
 
             //* Price
             Text(
-              '3.694.000 \đ',
+              '3.694.000 đ',
               style: Theme.of(context)
                   .textTheme
                   .titleSmall!

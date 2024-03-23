@@ -77,7 +77,7 @@ class CheckoutScreen extends StatelessWidget {
                   subTitle: 'Đơn hàng sẽ sớm được vận chuyển đến bạn!',
                   onPressed: () => Get.offAll(() => const NavigationMenu()),
                 )),
-            child: const Text('Thanh toán 9.999.999\đ')),
+            child: const Text('Thanh toán 9.999.999đ')),
       ),
     );
   }
