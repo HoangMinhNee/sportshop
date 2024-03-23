@@ -6,7 +6,7 @@ class MFormatException implements Exception {
   /// Default constructor with a generic error message.
   const MFormatException(
       [this.message =
-          'An unexpected format error occurred. Please check your input.']);
+          'Đã xảy ra lỗi định dạng không mong muốn. Vui lòng kiểm tra đầu vào của bạn.']);
 
   /// Create a format exception from a specific error message.
   factory MFormatException.fromMessage(String message) {
@@ -21,22 +21,21 @@ class MFormatException implements Exception {
     switch (code) {
       case 'invalid-email-format':
         return const MFormatException(
-            'The email address format is invalid. Please enter a valid email.');
+            'Định dạng địa chỉ email không hợp lệ. Vui lòng nhập email hợp lệ.');
       case 'invalid-phone-number-format':
         return const MFormatException(
-            'The provided phone number format is invalid. Please enter a valid number.');
+            'Định dạng số điện thoại được cung cấp không hợp lệ. Vui lòng nhập một số hợp lệ.');
       case 'invalid-date-format':
         return const MFormatException(
-            'The date format is invalid. Please enter a valid date.');
+            'Định dạng ngày không hợp lệ. Vui lòng nhập một ngày hợp lệ.');
       case 'invalid-url-format':
         return const MFormatException(
-            'The URL format is invalid. Please enter a valid URL.');
+            'Định dạng URL không hợp lệ. Vui lòng nhập một URL hợp lệ.');
       case 'invalid-credit-card-format':
         return const MFormatException(
-            'The credit card format is invalid. Please enter a valid credit card number.');
+            'Định dạng thẻ tín dụng không hợp lệ. Vui lòng nhập số thẻ tín dụng hợp lệ.');
       case 'invalid-numeric-format':
-        return const MFormatException(
-            'The input should be a valid numeric format.');
+        return const MFormatException('Đầu vào phải có định dạng số hợp lệ.');
       // Add more cases as needed...
       default:
         return const MFormatException();

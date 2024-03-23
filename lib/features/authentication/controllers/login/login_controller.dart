@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:sportshop/data/repositories/authentication/authentication_repository.dart';
+import 'package:sportshop/features/personalization/controllers/user_controller.dart';
 import 'package:sportshop/utils/contants/image_strings.dart';
 import 'package:sportshop/utils/helpers/network_manager.dart';
 import 'package:sportshop/utils/popups/fullscreen_loader.dart';
@@ -15,6 +17,8 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+
+  final userController = Get.put(UserController());
 
   @override
   void onInit() {
@@ -60,6 +64,31 @@ class LoginController extends GetxController {
       AuthenticationRepository.instance.screenRedirect();
     } catch (e) {
       MFullScreenLoader.stopLoading();
+      MLoaders.errorSnackBar(title: 'Ôi Không', message: e.toString());
+    }
+  }
+
+  //* -- Google SignIn Authentication
+  Future<void> googleSignIn() async {
+    try {
+      //* Start Loading
+      MFullScreenLoader.openLoadingDialog(
+          'Logging you in...', MImages.docerAnimation);
+
+      //* Check Internet Connectivity
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) {
+        MFullScreenLoader.stopLoading();
+        return;
+      }
+
+      //* Google Authentication
+      final userCredentials =
+          await AuthenticationRepository.instance.signInWithGoogle();
+
+      //* Save User Record
+      await userController.saveUserRecord(userCredentials);
+    } catch (e) {
       MLoaders.errorSnackBar(title: 'Ôi Không', message: e.toString());
     }
   }
