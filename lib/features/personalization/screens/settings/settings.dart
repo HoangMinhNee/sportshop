@@ -6,6 +6,7 @@ import 'package:sportshop/common/widgets/custom_shapes/containers/primary_header
 import 'package:sportshop/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:sportshop/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:sportshop/common/widgets/texts/section_heading.dart';
+import 'package:sportshop/data/repositories/authentication/authentication_repository.dart';
 import 'package:sportshop/features/personalization/screens/address/address.dart';
 import 'package:sportshop/features/personalization/screens/profile/profile.dart';
 import 'package:sportshop/features/shop/screens/cart/cart.dart';
@@ -125,7 +126,9 @@ class SettingScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                        onPressed: () {}, child: const Text('Đăng Xuất')),
+                        onPressed: () =>
+                            AuthenticationRepository.instance.logout(),
+                        child: const Text('Đăng Xuất')),
                   ),
                   const SizedBox(
                     height: MSizes.spaceBtwSections * 2.5,

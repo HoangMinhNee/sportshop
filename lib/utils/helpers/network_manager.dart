@@ -24,7 +24,7 @@ class NetworkManager extends GetxController {
   Future<void> _updateConnectionStatus(ConnectivityResult result) async {
     _connectionStatus.value = result;
     if (_connectionStatus.value == ConnectivityResult.none) {
-      MLoaders.warningSnackBar(title: 'Không có kết nối Internet');
+      MLoaders.customToast(message: 'Không có kết nối Internet');
     }
   }
 
@@ -38,7 +38,7 @@ class NetworkManager extends GetxController {
       } else {
         return true;
       }
-    } on PlatformException catch (_) {
+    } on PlatformException catch (e) {
       return false;
     }
   }

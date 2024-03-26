@@ -9,27 +9,29 @@ class MLoaders {
       ScaffoldMessenger.of(Get.context!).hideCurrentSnackBar();
 
   static customToast({required message}) {
-    ScaffoldMessenger.of(Get.context!).showSnackBar(SnackBar(
-      elevation: 0,
-      duration: const Duration(seconds: 3),
-      backgroundColor: Colors.transparent,
-      content: Container(
-        padding: const EdgeInsets.all(12),
-        margin: const EdgeInsets.symmetric(horizontal: 30),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          color: MHelperFunctions.isDarkMode(Get.context!)
-              ? MColors.darkerGrey.withOpacity(0.9)
-              : MColors.grey.withOpacity(0.9),
-        ),
-        child: Center(
-          child: Text(
-            message,
-            style: Theme.of(Get.context!).textTheme.labelLarge,
+    ScaffoldMessenger.of(Get.context!).showSnackBar(
+      SnackBar(
+        elevation: 0,
+        duration: const Duration(seconds: 3),
+        backgroundColor: Colors.transparent,
+        content: Container(
+          padding: const EdgeInsets.all(12),
+          margin: const EdgeInsets.symmetric(horizontal: 30),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            color: MHelperFunctions.isDarkMode(Get.context!)
+                ? MColors.darkerGrey.withOpacity(0.9)
+                : MColors.grey.withOpacity(0.9),
+          ),
+          child: Center(
+            child: Text(
+              message,
+              style: Theme.of(Get.context!).textTheme.labelLarge,
+            ),
           ),
         ),
       ),
-    ));
+    );
   }
 
   static successSnackBar({required title, message = '', duration = 3}) {

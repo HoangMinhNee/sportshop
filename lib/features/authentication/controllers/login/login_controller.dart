@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -22,8 +21,8 @@ class LoginController extends GetxController {
 
   @override
   void onInit() {
-    email.text = localStorage.read('REMEMBER_ME_EMAIL');
-    password.text = localStorage.read('REMEMBER_ME_PASSWORD');
+    email.text = localStorage.read('REMEMBER_ME_EMAIL') ?? '';
+    password.text = localStorage.read('REMEMBER_ME_PASSWORD') ?? '';
     super.onInit();
   }
 
@@ -32,7 +31,7 @@ class LoginController extends GetxController {
     try {
       //* Start Loading
       MFullScreenLoader.openLoadingDialog(
-          'Logging you in...', MImages.docerAnimation);
+          'Đang đăng nhập...', MImages.docerAnimation);
 
       //* Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -73,7 +72,7 @@ class LoginController extends GetxController {
     try {
       //* Start Loading
       MFullScreenLoader.openLoadingDialog(
-          'Logging you in...', MImages.docerAnimation);
+          'Đang đăng nhập...', MImages.docerAnimation);
 
       //* Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -88,7 +87,15 @@ class LoginController extends GetxController {
 
       //* Save User Record
       await userController.saveUserRecord(userCredentials);
+
+      //* Remove Loader
+      MFullScreenLoader.stopLoading();
+
+      //* Redirect
+      AuthenticationRepository.instance.screenRedirect();
     } catch (e) {
+      //* Remove Loader
+      MFullScreenLoader.stopLoading();
       MLoaders.errorSnackBar(title: 'Ôi Không', message: e.toString());
     }
   }

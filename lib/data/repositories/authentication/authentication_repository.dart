@@ -30,9 +30,10 @@ class AuthenticationRepository extends GetxController {
     screenRedirect();
   }
 
-  //* Function to show Relevant Screen
-  screenRedirect() async {
+  //* Function to determine the relevant screen and redirect accordingly.
+  void screenRedirect() async {
     final user = _auth.currentUser;
+
     if (user != null) {
       //* If the user is logged in
       if (user.emailVerified) {
@@ -45,6 +46,7 @@ class AuthenticationRepository extends GetxController {
     } else {
       //* Local Storage
       deviceStorage.writeIfNull('IsFirstTime', true);
+
       //* Check if it's the first time launching the app
       deviceStorage.read('IsFirstTime') != true
           ? Get.offAll(() => const LoginScreen())
@@ -109,9 +111,24 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
-  //* [ReAuthenticate] Reauthenticate User
+  //* [EmailAuthentication] FORGET PASSWORD
+  Future<void> sendPaswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      throw MFirebaseAuthException(e.code).message;
+    } on MFirebaseException catch (e) {
+      throw MFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const MFormatException();
+    } on PlatformException catch (e) {
+      throw MPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Đã xảy ra lỗi. Vui lòng thử lại';
+    }
+  }
 
-  //* [EmailAuthentication] FORGOT PASSWORD
+  //* [ReAuthenticate] Reauthenticate User
 
   // ----------- Federated Identity & Social Login -------------- //
 

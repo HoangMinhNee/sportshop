@@ -25,7 +25,7 @@ class SignupController extends GetxController {
   GlobalKey<FormState> signupFormKey = GlobalKey<FormState>();
 
   //* -- Signup
-  Future<void> signup() async {
+  void signup() async {
     try {
       //* Start Loading
       MFullScreenLoader.openLoadingDialog(
@@ -52,6 +52,8 @@ class SignupController extends GetxController {
             title: 'Chú ý!',
             message:
                 'Để tạo tài khoản, bạn phải đọc và chấp nhận Quyền riêng tư & Điều khoản sử dụng.');
+        //* Remove Loader
+        MFullScreenLoader.stopLoading();
         return;
       }
 
