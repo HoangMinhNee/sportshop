@@ -81,18 +81,7 @@ class UserModel {
         profilePicture: data['ProfilePicture'] ?? '',
       );
     } else {
-      // Trả về một đối tượng UserModel mặc định nếu dữ liệu tài liệu là null
-      return UserModel(
-        id: '',
-        firstName: '',
-        lastName: '',
-        username: '',
-        email: '',
-        phoneNumber: '',
-        profilePicture: '',
-      );
-      // Hoặc có thể ném một ngoại lệ để báo hiệu rằng dữ liệu tài liệu là null
-      // throw Exception('Dữ liệu tài liệu là null');
+      return UserModel.empty();
     }
   }
 }

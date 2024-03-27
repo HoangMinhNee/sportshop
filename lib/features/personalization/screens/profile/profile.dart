@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sportshop/common/widgets/appbar/appbar.dart';
 import 'package:sportshop/common/widgets/images/circular_image.dart';
 import 'package:sportshop/common/widgets/texts/section_heading.dart';
+import 'package:sportshop/features/personalization/controllers/user_controller.dart';
+import 'package:sportshop/features/personalization/screens/change_name/change_name.dart';
 import 'package:sportshop/features/personalization/screens/profile/widgets/profile_menu.dart';
 import 'package:sportshop/utils/contants/image_strings.dart';
 import 'package:sportshop/utils/contants/sizes.dart';
@@ -11,6 +14,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       appBar: const MAppBar(
         showBackArrow: true,
@@ -46,9 +50,15 @@ class ProfileScreen extends StatelessWidget {
                   title: 'Thông Tin Tài Khoản', showActionButton: false),
               const SizedBox(height: MSizes.spaceBtwItems),
 
-              MProfileMenu(onPressed: () {}, title: 'Tên', value: 'Hoang Minh'),
               MProfileMenu(
-                  onPressed: () {}, title: 'Username', value: 'hoang_minh'),
+                title: 'Tên',
+                value: controller.user.value.fullName,
+                onPressed: () => Get.to(() => const ChangeName()),
+              ),
+              MProfileMenu(
+                  onPressed: () {},
+                  title: 'Username',
+                  value: controller.user.value.username),
 
               const SizedBox(height: MSizes.spaceBtwItems),
               const Divider(),
@@ -59,13 +69,18 @@ class ProfileScreen extends StatelessWidget {
                   title: 'Thông Tin Cá Nhân', showActionButton: false),
               const SizedBox(height: MSizes.spaceBtwItems),
 
-              MProfileMenu(onPressed: () {}, title: 'User ID', value: '123123'),
+              MProfileMenu(
+                  onPressed: () {},
+                  title: 'User ID',
+                  value: controller.user.value.id),
               MProfileMenu(
                   onPressed: () {},
                   title: 'Email',
-                  value: 'hoangminh@gmail.com'),
+                  value: controller.user.value.email),
               MProfileMenu(
-                  onPressed: () {}, title: 'SĐT', value: '+84-852-099497'),
+                  onPressed: () {},
+                  title: 'SĐT',
+                  value: controller.user.value.phoneNumber),
               MProfileMenu(onPressed: () {}, title: 'Giới tính', value: 'Nam'),
               MProfileMenu(
                   onPressed: () {}, title: 'Ngày sinh', value: '28-11-2002'),
